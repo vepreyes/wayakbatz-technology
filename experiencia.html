@@ -45,7 +45,7 @@
     margin-left: 22px; font-size: .95rem;
   }
   nav a:hover { color: var(--azul-glifo); }
-  nav a.activo { color: var(--azul-glifo); font-weight: bold; }
+  nav a.activo { color: var(--azul-glifo); }
   .controles { display: flex; align-items: center; gap: 10px; }
   .lang-toggle { display: flex; border: 1px solid #E8DFCF; border-radius: 999px; overflow: hidden; }
   .lang-toggle button {
@@ -170,10 +170,11 @@
       <span>WayakBatz</span>
     </a>
     <nav>
-      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="index.html#nombre" data-i18n="nav.nombre">El nombre</a>
       <a href="experiencia.html" class="activo" data-i18n="nav.experiencia">Experiencia</a>
       <a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a>
       <a href="index.html#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+      <a href="index.html#batzy">Batzy</a>
       <a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a>
     </nav>
     <div class="controles">
@@ -342,7 +343,7 @@
 (function () {
   var I18N = {
     es: {
-      "nav.inicio": "Inicio",
+      "nav.nombre": "El nombre",
       "nav.experiencia": "Experiencia",
       "nav.servicios": "Servicios",
       "nav.proyectos": "Proyectos",
@@ -407,7 +408,7 @@
       "titulo": "Victor Portillo — Experiencia y estudios · WayakBatz Technology"
     },
     en: {
-      "nav.inicio": "Home",
+      "nav.nombre": "The name",
       "nav.experiencia": "Experience",
       "nav.servicios": "Services",
       "nav.proyectos": "Projects",
