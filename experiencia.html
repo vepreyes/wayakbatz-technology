@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victor Reyes — Experiencia y estudios · WayakBatz Technology</title>
+<meta name="description" content="Experiencia y estudios de Victor Reyes, desarrollador de software y analista programador: más de 25 años en tecnología, Oracle, SAP y desarrollo web y móvil.">
+<link rel="icon" href="favicon.ico">
+<style>
+  @font-face {
+    font-family: "Mayan";
+    src: url("fuente-mayan.ttf") format("truetype");
+    font-display: swap;
+  }
+  :root {
+    --marfil: #FAF6EE;
+    --noche: #17130E;
+    --azul-glifo: #1E3A5F;
+    --oro: #C9A227;
+    --jade: #047857;
+    --texto: #2B2620;
+    --texto-suave: #6B6257;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--marfil);
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0; border-bottom: 1px solid #E8DFCF; flex-wrap: wrap; gap: 12px;
+  }
+  .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .marca img { width: 44px; height: 44px; object-fit: contain; }
+  .marca span {
+    font-family: "Mayan", Georgia, serif;
+    font-size: 1.5rem; color: var(--azul-glifo); letter-spacing: .02em;
+  }
+  nav a {
+    color: var(--texto-suave); text-decoration: none;
+    margin-left: 22px; font-size: .95rem;
+  }
+  nav a:hover { color: var(--azul-glifo); }
+  nav a.activo { color: var(--azul-glifo); font-weight: bold; }
+  .controles { display: flex; align-items: center; gap: 10px; }
+  .lang-toggle { display: flex; border: 1px solid #E8DFCF; border-radius: 999px; overflow: hidden; }
+  .lang-toggle button {
+    border: 0; background: transparent; color: var(--texto-suave);
+    padding: 6px 12px; font-family: Georgia, serif; font-size: .9rem; cursor: pointer;
+  }
+  .lang-toggle button.activo { background: var(--oro); color: #17130E; font-weight: bold; }
+  .tema-btn {
+    border: 1px solid #E8DFCF; background: transparent; color: var(--texto-suave);
+    padding: 6px 12px; border-radius: 999px; font-family: Georgia, serif;
+    font-size: .9rem; cursor: pointer;
+  }
+  .tema-btn:hover { color: var(--azul-glifo); border-color: var(--azul-glifo); }
+
+  .hero { text-align: center; padding: 52px 0 36px; }
+  .hero h1 {
+    font-family: "Mayan", Georgia, serif;
+    font-weight: normal; font-size: 2rem; color: var(--azul-glifo);
+  }
+  .hero .titulo {
+    color: var(--oro); font-size: 1.05rem; letter-spacing: .06em;
+    text-transform: uppercase; margin-top: 6px;
+  }
+  .hero p.lead { color: var(--texto-suave); max-width: 600px; margin: 14px auto 0; }
+
+  section { padding: 40px 0; }
+  h2 {
+    font-family: "Mayan", Georgia, serif; font-weight: normal;
+    font-size: 1.5rem; color: var(--azul-glifo); margin-bottom: 6px;
+  }
+  .sub { color: var(--texto-suave); margin-bottom: 22px; }
+  section p { margin-bottom: 12px; }
+
+  .trabajo {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
+    padding: 22px; margin-bottom: 16px;
+  }
+  .trabajo .fecha {
+    color: var(--oro); font-size: .85rem; letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .trabajo h3 { color: var(--azul-glifo); font-size: 1.2rem; margin-top: 4px; }
+  .trabajo .empresa { color: var(--texto-suave); font-size: .95rem; }
+  .trabajo p { margin-top: 8px; font-size: .95rem; margin-bottom: 0; }
+
+  .tarjetas { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .tarjeta {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
+    padding: 22px;
+  }
+  .tarjeta h3 { font-size: 1.1rem; color: var(--azul-glifo); margin-bottom: 8px; }
+  .tarjeta p { font-size: .95rem; color: var(--texto-suave); margin-bottom: 0; }
+  .tarjeta a {
+    display: inline-block; margin-top: 12px; color: var(--jade);
+    font-weight: bold; text-decoration: none;
+  }
+  .tarjeta a:hover { text-decoration: underline; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 999px;
+    padding: 6px 14px; font-size: .92rem;
+  }
+  .subtitulo {
+    font-size: 1.05rem; color: var(--azul-glifo); font-weight: bold;
+    margin: 24px 0 10px;
+  }
+  .lista { margin-left: 20px; }
+  .lista li { margin-bottom: 8px; font-size: .95rem; }
+  .lista li strong { color: var(--azul-glifo); }
+
+  .cta-final { text-align: center; }
+  .cta-final .cta {
+    display: inline-block; margin-top: 18px; padding: 12px 26px;
+    background: var(--jade); color: #fff; text-decoration: none;
+    border-radius: 999px; font-family: Georgia, serif;
+  }
+  .cta-final .cta:hover { background: #036149; }
+  .nota { color: var(--texto-suave); font-size: .95rem; margin-top: 18px; }
+
+  footer {
+    text-align: center; color: var(--texto-suave); font-size: .85rem;
+    padding: 28px 0 36px; border-top: 1px solid #E8DFCF;
+  }
+
+  html[data-theme="dark"] {
+    --marfil: #17130E;
+    --noche: #0E0B08;
+    --azul-glifo: #8FB4D9;
+    --jade: #10b981;
+    --texto: #F2EBDD;
+    --texto-suave: #CFC6B4;
+  }
+  html[data-theme="dark"] header { border-bottom-color: #3A3226; }
+  html[data-theme="dark"] .lang-toggle,
+  html[data-theme="dark"] .tema-btn { border-color: #3A3226; }
+  html[data-theme="dark"] .trabajo,
+  html[data-theme="dark"] .tarjeta,
+  html[data-theme="dark"] .chip { background: #221C15; border-color: #3A3226; }
+  html[data-theme="dark"] .cta-final .cta:hover { background: #0da271; }
+  html[data-theme="dark"] footer { border-top-color: #3A3226; }
+
+  .icono-oscuro { display: none; }
+  html[data-theme="dark"] .icono-claro { display: none; }
+  html[data-theme="dark"] .icono-oscuro { display: block; }
+
+  @media (max-width: 640px) {
+    .tarjetas { grid-template-columns: 1fr; }
+    nav a { margin-left: 12px; }
+    .marca span { font-size: 1.2rem; }
+    .hero h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="marca" href="index.html">
+      <img class="icono-claro" src="icono.png" alt="Símbolo WayakBatz">
+      <img class="icono-oscuro" src="icono-oscuro.png" alt="Símbolo WayakBatz">
+      <span>WayakBatz</span>
+    </a>
+    <nav>
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="experiencia.html" class="activo" data-i18n="nav.experiencia">Experiencia</a>
+      <a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a>
+      <a href="index.html#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+      <a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a>
+    </nav>
+    <div class="controles">
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es" class="activo">ES</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button type="button" id="tema-btn" class="tema-btn">Oscuro</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Victor Reyes</h1>
+    <div class="titulo" data-i18n="hero.titulo">Desarrollador de software · Analista programador</div>
+    <p class="lead" data-i18n="hero.lead">Más de 25 años construyendo sistemas que funcionan: desde soporte técnico
+      hasta análisis y desarrollo en Oracle y SAP. Hoy, como desarrollador independiente en Charlotte, NC,
+      hago páginas web y aplicaciones para negocios.</p>
+  </div>
+
+  <section id="perfil">
+    <h2 data-i18n="perfil.h2">Perfil</h2>
+    <p data-i18n="perfil.p1">Empecé en 1998 dando soporte a puntos de venta en un supermercado, y de ahí pasé
+      al Help Desk y al desarrollo en Grupo OPSA, el grupo de periódicos más grande de Honduras
+      (La Prensa, El Heraldo), donde trabajé 17 años. Después seguí como analista programador en NGS,
+      para Gildan Activewear.</p>
+    <p data-i18n="perfil.p2">Mi trabajo siempre ha sido el mismo: entender cómo funciona un negocio y construir
+      el sistema que lo sostiene — nómina, facturación, comisiones, recursos humanos, interfaces entre
+      sistemas. Hoy aplico esa experiencia como independiente, con herramientas actuales como Flutter.</p>
+  </section>
+
+  <section id="experiencia">
+    <h2 data-i18n="exp.h2">Experiencia</h2>
+    <p class="sub" data-i18n="exp.sub">De 1998 a hoy, en Honduras y en Estados Unidos.</p>
+
+    <div class="trabajo">
+      <div class="fecha">2018 –</div>
+      <h3 data-i18n="exp.ngs.puesto">Analista programador de sistemas informáticos</h3>
+      <div class="empresa">New Generation Software (NGS) · Outsourcing para Gildan Activewear, Río Nance, Honduras</div>
+      <p data-i18n="exp.ngs.p">Análisis, diseño, desarrollo y mantenimiento de sistemas; mejora continua de procesos.</p>
+    </div>
+
+    <div class="trabajo">
+      <div class="fecha">2016 – 2018</div>
+      <h3 data-i18n="exp.propio.puesto">Negocio propio</h3>
+      <div class="empresa" data-i18n="exp.propio.empresa">Servicios de tecnología · San Pedro Sula, Honduras</div>
+      <p data-i18n="exp.propio.p">Servicios y desarrollo de tecnología por cuenta propia.</p>
+    </div>
+
+    <div class="trabajo">
+      <div class="fecha">2005 – 2016</div>
+      <h3 data-i18n="exp.opsa2.puesto">Analista programador de sistemas informáticos</h3>
+      <div class="empresa">Grupo OPSA · Diario La Prensa, El Heraldo, Estilo, Laboratorios Finlay</div>
+      <p data-i18n="exp.opsa2.p">Análisis, diseño, desarrollo y mantenimiento de sistemas; mejora continua de procesos.
+        Sistemas de recursos humanos, nómina, facturación y comisiones; interfaces Oracle ↔ SAP.</p>
+    </div>
+
+    <div class="trabajo">
+      <div class="fecha">1999 – 2004</div>
+      <h3 data-i18n="exp.opsa1.puesto">Técnico Help Desk</h3>
+      <div class="empresa">Grupo OPSA</div>
+      <p data-i18n="exp.opsa1.p">Instalación de software, reparación de PC e impresoras, instalación de redes,
+        mantenimiento de equipo y soporte a usuarios.</p>
+    </div>
+
+    <div class="trabajo">
+      <div class="fecha">1998 – 1999</div>
+      <h3 data-i18n="exp.despensa.puesto">Auxiliar de Cómputo</h3>
+      <div class="empresa" data-i18n="exp.despensa.empresa">Supermercado La Despensa de Don Juan · San Pedro Sula, Honduras</div>
+      <p data-i18n="exp.despensa.p">Soporte a puntos de venta y balanzas, mantenimiento de precios e inventarios,
+        cierre diario de ventas y reportes.</p>
+    </div>
+  </section>
+
+  <section id="proyectos-recientes">
+    <h2 data-i18n="proy.h2">Proyectos recientes</h2>
+    <p class="sub" data-i18n="proy.sub">Trabajo propio, publicado y funcionando.</p>
+    <div class="tarjetas">
+      <div class="tarjeta">
+        <h3>Calero's Cleaning Services</h3>
+        <p data-i18n="proy.caleros.p">Sitio bilingüe de 5 páginas para una empresa de limpieza en Charlotte:
+          10 servicios, cotización en línea y galería. Publicado en 2026.</p>
+        <a href="https://vepreyes.github.io/caleros-cleaning-services/" target="_blank" rel="noopener" data-i18n="proy.caleros.link">Ver el sitio &rarr;</a>
+      </div>
+      <div class="tarjeta">
+        <h3 data-i18n="proy.viajes.h3">Mis Viajes — app Flutter</h3>
+        <p data-i18n="proy.viajes.p">App propia para registrar los viajes del día en el camión, con historial
+          y conteo por fecha.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>KITT</h3>
+        <p data-i18n="proy.kitt.p">Compañero de voz para el camión: comandos de voz para anotar viajes
+          y consultar el conteo sin tocar el teléfono.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2 data-i18n="hab.h2">Habilidades</h2>
+    <p class="sub" data-i18n="hab.sub">Tecnologías y sistemas que he construido.</p>
+    <div class="subtitulo" data-i18n="hab.tec">Tecnologías</div>
+    <div class="chips">
+      <span class="chip">Oracle Developer (2000, 9i, 10g)</span>
+      <span class="chip">PL/SQL</span>
+      <span class="chip">SAP ERP/R3 (FI, RH, MM)</span>
+      <span class="chip">ABAP</span>
+      <span class="chip">Visual Basic</span>
+      <span class="chip">C# (DevExpress)</span>
+      <span class="chip">ASP.NET</span>
+      <span class="chip">Flutter y Dart</span>
+      <span class="chip">HTML, CSS y JavaScript</span>
+      <span class="chip">Git y GitHub</span>
+      <span class="chip">Toad for Oracle</span>
+    </div>
+    <div class="subtitulo" data-i18n="hab.sistemas">Sistemas que he construido</div>
+    <ul class="lista">
+      <li data-i18n="hab.sis.rrhh"><strong>Recursos humanos:</strong> vacaciones, prestaciones laborales, constancias para colaboradores.</li>
+      <li data-i18n="hab.sis.nomina"><strong>Nómina:</strong> cálculos de ISR, IHSS, RAP, INFOP y control de horas extras.</li>
+      <li data-i18n="hab.sis.comisiones"><strong>Comisiones:</strong> compensación variable para gestores de ventas y agencias de publicidad.</li>
+      <li data-i18n="hab.sis.facturacion"><strong>Facturación:</strong> publicidad, circulación, suscripciones y telefonía celular, con Web Services.</li>
+      <li data-i18n="hab.sis.interfaces"><strong>Interfaces Oracle ↔ SAP:</strong> facturación, planilla y maestros de productos e inventarios.</li>
+      <li data-i18n="hab.sis.produccion"><strong>Producción:</strong> herramienta de planeación para Garment Dyeing.</li>
+    </ul>
+  </section>
+
+  <section id="formacion">
+    <h2 data-i18n="form.h2">Formación y estudios</h2>
+    <p class="sub" data-i18n="form.sub">Educación técnica y formación continua.</p>
+    <div class="trabajo">
+      <div class="fecha" data-i18n="form.itc.fecha">Título técnico</div>
+      <h3 data-i18n="form.itc.titulo">Bachiller y Técnico en Computación</h3>
+      <div class="empresa">Instituto Técnico en Computación (ITC) · San Pedro Sula, Honduras</div>
+    </div>
+    <div class="subtitulo" data-i18n="form.cursos">Cursos</div>
+    <ul class="lista">
+      <li data-i18n="form.curso.html">HTML5 y CSS3 — New Horizons (2013)</li>
+      <li data-i18n="form.curso.forms">Windows Forms con Microsoft Visual Studio 2005 — C.I.I. (2007)</li>
+      <li data-i18n="form.curso.abap">Curso Básico de ABAP/4 — Team Solutions (2005)</li>
+      <li data-i18n="form.curso.oracle">Oracle: Data Modeling, Forms y Reports 2000 — Diario La Prensa (2005)</li>
+      <li data-i18n="form.curso.win">Windows 2000 Network and Operating System Essentials — C.I.I. (2003)</li>
+      <li data-i18n="form.curso.carnegie">Servicio al cliente, liderazgo eficaz y trabajo en equipo — Dale Carnegie Training (2003)</li>
+    </ul>
+  </section>
+
+  <section id="idiomas">
+    <h2 data-i18n="idiomas.h2">Idiomas</h2>
+    <ul class="lista">
+      <li data-i18n="idiomas.es"><strong>Español:</strong> nativo.</li>
+      <li data-i18n="idiomas.en"><strong>Inglés:</strong> intermedio.</li>
+    </ul>
+  </section>
+
+  <section class="cta-final">
+    <h2 data-i18n="cta.h2">¿Tienes un proyecto en mente?</h2>
+    <p class="sub" data-i18n="cta.sub">Cuéntame qué necesitas y lo cotizamos a la medida.</p>
+    <a class="cta" href="index.html#contacto" data-i18n="cta.boton">Cuéntanos tu proyecto</a>
+    <p class="nota" data-i18n="cta.nota">Referencias disponibles a solicitud.</p>
+  </section>
+
+  <footer>
+    © 2026 WayakBatz Technology · Charlotte, NC<br>
+    <span data-i18n="pie">Wayak' — sueño · B'atz' — el hilo</span>
+  </footer>
+
+</div>
+<script>
+(function () {
+  var I18N = {
+    es: {
+      "nav.inicio": "Inicio",
+      "nav.experiencia": "Experiencia",
+      "nav.servicios": "Servicios",
+      "nav.proyectos": "Proyectos",
+      "nav.contacto": "Contacto",
+      "hero.titulo": "Desarrollador de software · Analista programador",
+      "hero.lead": "Más de 25 años construyendo sistemas que funcionan: desde soporte técnico hasta análisis y desarrollo en Oracle y SAP. Hoy, como desarrollador independiente en Charlotte, NC, hago páginas web y aplicaciones para negocios.",
+      "perfil.h2": "Perfil",
+      "perfil.p1": "Empecé en 1998 dando soporte a puntos de venta en un supermercado, y de ahí pasé al Help Desk y al desarrollo en Grupo OPSA, el grupo de periódicos más grande de Honduras (La Prensa, El Heraldo), donde trabajé 17 años. Después seguí como analista programador en NGS, para Gildan Activewear.",
+      "perfil.p2": "Mi trabajo siempre ha sido el mismo: entender cómo funciona un negocio y construir el sistema que lo sostiene — nómina, facturación, comisiones, recursos humanos, interfaces entre sistemas. Hoy aplico esa experiencia como independiente, con herramientas actuales como Flutter.",
+      "exp.h2": "Experiencia",
+      "exp.sub": "De 1998 a hoy, en Honduras y en Estados Unidos.",
+      "exp.ngs.puesto": "Analista programador de sistemas informáticos",
+      "exp.ngs.p": "Análisis, diseño, desarrollo y mantenimiento de sistemas; mejora continua de procesos.",
+      "exp.propio.puesto": "Negocio propio",
+      "exp.propio.empresa": "Servicios de tecnología · San Pedro Sula, Honduras",
+      "exp.propio.p": "Servicios y desarrollo de tecnología por cuenta propia.",
+      "exp.opsa2.puesto": "Analista programador de sistemas informáticos",
+      "exp.opsa2.p": "Análisis, diseño, desarrollo y mantenimiento de sistemas; mejora continua de procesos. Sistemas de recursos humanos, nómina, facturación y comisiones; interfaces Oracle ↔ SAP.",
+      "exp.opsa1.puesto": "Técnico Help Desk",
+      "exp.opsa1.p": "Instalación de software, reparación de PC e impresoras, instalación de redes, mantenimiento de equipo y soporte a usuarios.",
+      "exp.despensa.puesto": "Auxiliar de Cómputo",
+      "exp.despensa.empresa": "Supermercado La Despensa de Don Juan · San Pedro Sula, Honduras",
+      "exp.despensa.p": "Soporte a puntos de venta y balanzas, mantenimiento de precios e inventarios, cierre diario de ventas y reportes.",
+      "proy.h2": "Proyectos recientes",
+      "proy.sub": "Trabajo propio, publicado y funcionando.",
+      "proy.caleros.p": "Sitio bilingüe de 5 páginas para una empresa de limpieza en Charlotte: 10 servicios, cotización en línea y galería. Publicado en 2026.",
+      "proy.caleros.link": "Ver el sitio &rarr;",
+      "proy.viajes.h3": "Mis Viajes — app Flutter",
+      "proy.viajes.p": "App propia para registrar los viajes del día en el camión, con historial y conteo por fecha.",
+      "proy.kitt.p": "Compañero de voz para el camión: comandos de voz para anotar viajes y consultar el conteo sin tocar el teléfono.",
+      "hab.h2": "Habilidades",
+      "hab.sub": "Tecnologías y sistemas que he construido.",
+      "hab.tec": "Tecnologías",
+      "hab.sistemas": "Sistemas que he construido",
+      "hab.sis.rrhh": "<strong>Recursos humanos:</strong> vacaciones, prestaciones laborales, constancias para colaboradores.",
+      "hab.sis.nomina": "<strong>Nómina:</strong> cálculos de ISR, IHSS, RAP, INFOP y control de horas extras.",
+      "hab.sis.comisiones": "<strong>Comisiones:</strong> compensación variable para gestores de ventas y agencias de publicidad.",
+      "hab.sis.facturacion": "<strong>Facturación:</strong> publicidad, circulación, suscripciones y telefonía celular, con Web Services.",
+      "hab.sis.interfaces": "<strong>Interfaces Oracle ↔ SAP:</strong> facturación, planilla y maestros de productos e inventarios.",
+      "hab.sis.produccion": "<strong>Producción:</strong> herramienta de planeación para Garment Dyeing.",
+      "form.h2": "Formación y estudios",
+      "form.sub": "Educación técnica y formación continua.",
+      "form.itc.fecha": "Título técnico",
+      "form.itc.titulo": "Bachiller y Técnico en Computación",
+      "form.cursos": "Cursos",
+      "form.curso.html": "HTML5 y CSS3 — New Horizons (2013)",
+      "form.curso.forms": "Windows Forms con Microsoft Visual Studio 2005 — C.I.I. (2007)",
+      "form.curso.abap": "Curso Básico de ABAP/4 — Team Solutions (2005)",
+      "form.curso.oracle": "Oracle: Data Modeling, Forms y Reports 2000 — Diario La Prensa (2005)",
+      "form.curso.win": "Windows 2000 Network and Operating System Essentials — C.I.I. (2003)",
+      "form.curso.carnegie": "Servicio al cliente, liderazgo eficaz y trabajo en equipo — Dale Carnegie Training (2003)",
+      "idiomas.h2": "Idiomas",
+      "idiomas.es": "<strong>Español:</strong> nativo.",
+      "idiomas.en": "<strong>Inglés:</strong> intermedio.",
+      "cta.h2": "¿Tienes un proyecto en mente?",
+      "cta.sub": "Cuéntame qué necesitas y lo cotizamos a la medida.",
+      "cta.boton": "Cuéntanos tu proyecto",
+      "cta.nota": "Referencias disponibles a solicitud.",
+      "pie": "Wayak' — sueño · B'atz' — el hilo",
+      "tema.claro": "Claro",
+      "tema.oscuro": "Oscuro",
+      "titulo": "Victor Reyes — Experiencia y estudios · WayakBatz Technology"
+    },
+    en: {
+      "nav.inicio": "Home",
+      "nav.experiencia": "Experience",
+      "nav.servicios": "Services",
+      "nav.proyectos": "Projects",
+      "nav.contacto": "Contact",
+      "hero.titulo": "Software developer · Programmer analyst",
+      "hero.lead": "More than 25 years building systems that work: from technical support to analysis and development in Oracle and SAP. Today, as an independent developer in Charlotte, NC, I build websites and apps for businesses.",
+      "perfil.h2": "Profile",
+      "perfil.p1": "I started in 1998 supporting point-of-sale systems in a supermarket, then moved to the Help Desk and to development at Grupo OPSA, the largest newspaper group in Honduras (La Prensa, El Heraldo), where I worked for 17 years. Then I continued as a programmer analyst at NGS, for Gildan Activewear.",
+      "perfil.p2": "My work has always been the same: understanding how a business runs and building the system that supports it — payroll, billing, commissions, human resources, interfaces between systems. Today I apply that experience independently, with current tools like Flutter.",
+      "exp.h2": "Experience",
+      "exp.sub": "From 1998 to today, in Honduras and in the United States.",
+      "exp.ngs.puesto": "Computer Systems Programmer Analyst",
+      "exp.ngs.p": "Analysis, design, development, and maintenance of systems; continuous process improvement.",
+      "exp.propio.puesto": "Own business",
+      "exp.propio.empresa": "Technology services · San Pedro Sula, Honduras",
+      "exp.propio.p": "Technology services and development, self-employed.",
+      "exp.opsa2.puesto": "Computer Systems Programmer Analyst",
+      "exp.opsa2.p": "Analysis, design, development, and maintenance of systems; continuous process improvement. Human resources, payroll, billing, and commissions systems; Oracle ↔ SAP interfaces.",
+      "exp.opsa1.puesto": "Help Desk Technician",
+      "exp.opsa1.p": "Software installation, PC and printer repair, network installation, equipment maintenance, and user support.",
+      "exp.despensa.puesto": "Computer Assistant",
+      "exp.despensa.empresa": "La Despensa de Don Juan Supermarket · San Pedro Sula, Honduras",
+      "exp.despensa.p": "Point-of-sale and scale support, price and inventory maintenance, daily sales closing, and reports.",
+      "proy.h2": "Recent projects",
+      "proy.sub": "My own work, published and running.",
+      "proy.caleros.p": "Bilingual 5-page site for a cleaning company in Charlotte: 10 services, online quotes, and gallery. Published in 2026.",
+      "proy.caleros.link": "Visit the site &rarr;",
+      "proy.viajes.h3": "Mis Viajes — Flutter app",
+      "proy.viajes.p": "My own app to log the day's trips in the truck, with history and a count by date.",
+      "proy.kitt.p": "Voice companion for the truck: voice commands to log trips and check the count without touching the phone.",
+      "hab.h2": "Skills",
+      "hab.sub": "Technologies and systems I have built.",
+      "hab.tec": "Technologies",
+      "hab.sistemas": "Systems I have built",
+      "hab.sis.rrhh": "<strong>Human resources:</strong> vacations, severance, letters for employees.",
+      "hab.sis.nomina": "<strong>Payroll:</strong> ISR, IHSS, RAP, INFOP calculations and overtime control.",
+      "hab.sis.comisiones": "<strong>Commissions:</strong> variable compensation for sales managers and advertising agencies.",
+      "hab.sis.facturacion": "<strong>Billing:</strong> advertising, circulation, subscriptions, and cell phone billing, with Web Services.",
+      "hab.sis.interfaces": "<strong>Oracle ↔ SAP interfaces:</strong> billing, payroll, and product and inventory masters.",
+      "hab.sis.produccion": "<strong>Production:</strong> planning tool for Garment Dyeing.",
+      "form.h2": "Education",
+      "form.sub": "Technical education and ongoing training.",
+      "form.itc.fecha": "Technical degree",
+      "form.itc.titulo": "High School Diploma and Computer Technician",
+      "form.cursos": "Courses",
+      "form.curso.html": "HTML5 and CSS3 — New Horizons (2013)",
+      "form.curso.forms": "Windows Forms with Microsoft Visual Studio 2005 — C.I.I. (2007)",
+      "form.curso.abap": "Basic ABAP/4 Course — Team Solutions (2005)",
+      "form.curso.oracle": "Oracle: Data Modeling, Forms and Reports 2000 — Diario La Prensa (2005)",
+      "form.curso.win": "Windows 2000 Network and Operating System Essentials — C.I.I. (2003)",
+      "form.curso.carnegie": "Customer service, effective leadership, and teamwork — Dale Carnegie Training (2003)",
+      "idiomas.h2": "Languages",
+      "idiomas.es": "<strong>Spanish:</strong> native.",
+      "idiomas.en": "<strong>English:</strong> intermediate.",
+      "cta.h2": "Have a project in mind?",
+      "cta.sub": "Tell me what you need and we'll quote it to fit.",
+      "cta.boton": "Tell us about your project",
+      "cta.nota": "References available on request.",
+      "pie": "Wayak' — dream · B'atz' — the thread",
+      "tema.claro": "Light",
+      "tema.oscuro": "Dark",
+      "titulo": "Victor Reyes — Experience and education · WayakBatz Technology"
+    }
+  };
+
+  var temaBtn = document.getElementById("tema-btn");
+  var lang = "es";
+  var tema = "light";
+
+  try { lang = localStorage.getItem("wayakbatz-lang") || "es"; } catch (e) {}
+  try { tema = localStorage.getItem("wayakbatz-tema") || "light"; } catch (e) {}
+
+  function setLang(l) {
+    lang = (l === "en") ? "en" : "es";
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var v = I18N[lang][el.getAttribute("data-i18n")];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+      var v = I18N[lang][el.getAttribute("data-i18n-ph")];
+      if (v !== undefined) el.setAttribute("placeholder", v);
+    });
+    document.title = I18N[lang]["titulo"];
+    temaBtn.textContent = (tema === "dark") ? I18N[lang]["tema.claro"] : I18N[lang]["tema.oscuro"];
+    document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+      b.classList.toggle("activo", b.getAttribute("data-lang-btn") === lang);
+    });
+    try { localStorage.setItem("wayakbatz-lang", lang); } catch (e) {}
+  }
+
+  function setTema(t) {
+    tema = (t === "dark") ? "dark" : "light";
+    if (tema === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    temaBtn.textContent = (tema === "dark") ? I18N[lang]["tema.claro"] : I18N[lang]["tema.oscuro"];
+    try { localStorage.setItem("wayakbatz-tema", tema); } catch (e) {}
+  }
+
+  document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang-btn")); });
+  });
+  temaBtn.addEventListener("click", function () {
+    setTema(tema === "dark" ? "light" : "dark");
+  });
+
+  setLang(lang);
+  setTema(tema);
+})();
+</script>
+</body>
+</html>
