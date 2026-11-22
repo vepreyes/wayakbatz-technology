@@ -37,7 +37,10 @@
   header {
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 0; border-bottom: 1px solid #E8DFCF; flex-wrap: wrap; gap: 12px;
+    position: sticky; top: 0; z-index: 10; background: var(--fondo);
   }
+  section[id] { scroll-margin-top: 140px; }
+  nav { display: flex; flex-wrap: wrap; align-items: center; }
   .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; }
   .marca img { width: 44px; height: 44px; object-fit: contain; }
   .marca span {
