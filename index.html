@@ -36,8 +36,9 @@
   /* Barra superior mínima */
   header {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 0; border-bottom: 1px solid #E8DFCF; flex-wrap: wrap; gap: 12px;
+    padding: 18px 20px; border-bottom: 1px solid #E8DFCF; flex-wrap: wrap; gap: 12px;
     position: sticky; top: 0; z-index: 10; background: var(--marfil);
+    max-width: 1120px; margin: 0 auto;
   }
   section[id] { scroll-margin-top: 140px; }
   nav { display: flex; flex-wrap: wrap; align-items: center; }
@@ -251,7 +252,6 @@
 </style>
 </head>
 <body>
-<div class="wrap">
 
   <header>
     <a class="marca" href="#">
@@ -275,6 +275,8 @@
       <button type="button" id="tema-btn" class="tema-btn">Oscuro</button>
     </div>
   </header>
+
+<div class="wrap">
 
   <div class="hero">
     <div class="logo-card">
