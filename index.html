@@ -232,6 +232,15 @@
   html[data-theme="dark"] .form-success { color: var(--jade); }
   html[data-theme="dark"] footer { border-top-color: #3A3226; }
 
+  /* Logo e ícono: en modo oscuro se muestra la versión joya sobre negro */
+  .icono-oscuro { display: none; }
+  .hero .logo-card img.logo-oscuro { display: none; }
+  html[data-theme="dark"] .icono-claro { display: none; }
+  html[data-theme="dark"] .icono-oscuro { display: block; }
+  html[data-theme="dark"] .hero .logo-card img.logo-claro { display: none; }
+  html[data-theme="dark"] .hero .logo-card img.logo-oscuro { display: block; }
+  html[data-theme="dark"] .hero .logo-card { background: #000; box-shadow: 0 10px 30px rgba(0, 0, 0, .5); }
+
   @media (max-width: 640px) {
     .tarjetas, .servicios { grid-template-columns: 1fr; }
     nav a { margin-left: 12px; }
@@ -244,7 +253,8 @@
 
   <header>
     <a class="marca" href="#">
-      <img src="icono.png" alt="Símbolo WayakBatz">
+      <img class="icono-claro" src="icono.png" alt="Símbolo WayakBatz">
+      <img class="icono-oscuro" src="icono-oscuro.png" alt="Símbolo WayakBatz">
       <span>WayakBatz</span>
     </a>
     <nav>
@@ -265,7 +275,8 @@
 
   <div class="hero">
     <div class="logo-card">
-      <img src="logo.png" alt="WayakBatz Technology — logotipo final">
+      <img class="logo-claro" src="logo.png" alt="WayakBatz Technology — logotipo final">
+      <img class="logo-oscuro" src="logo-oscuro.png" alt="WayakBatz Technology — logotipo joya">
     </div>
     <h1 data-i18n="hero.h1">Hilando soluciones en tecnología</h1>
     <p class="lead" data-i18n="hero.lead">Desarrollo web y soporte técnico en Charlotte, Carolina del Norte.
