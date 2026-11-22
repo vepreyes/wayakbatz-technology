@@ -66,8 +66,8 @@
   /* Hero: el logo real, en tarjeta blanca */
   .hero { text-align: center; padding: 56px 0 40px; }
   .hero .logo-card {
-    background: #fff; border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(23, 19, 14, .10);
+    background: transparent; border-radius: 18px;
+    box-shadow: none;
     display: inline-block; padding: 28px 28px 8px;
   }
   .hero .logo-card img { width: min(320px, 72vw); height: auto; display: block; }
@@ -239,7 +239,6 @@
   html[data-theme="dark"] .icono-oscuro { display: block; }
   html[data-theme="dark"] .hero .logo-card img.logo-claro { display: none; }
   html[data-theme="dark"] .hero .logo-card img.logo-oscuro { display: block; }
-  html[data-theme="dark"] .hero .logo-card { background: #000; box-shadow: 0 10px 30px rgba(0, 0, 0, .5); }
 
   @media (max-width: 640px) {
     .tarjetas, .servicios { grid-template-columns: 1fr; }
