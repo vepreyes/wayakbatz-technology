@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es" class="notranslate" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<title>El nombre — WayakBatz Technology</title>
+<meta name="description" content="El nombre WayakBatz: dos palabras mayas unidas para crear, el tejedor de sueños a través del tiempo.">
+<link rel="icon" href="favicon.ico">
+<style>
+  @font-face {
+    font-family: "Mayan";
+    src: url("fuente-mayan.ttf") format("truetype");
+    font-display: swap;
+  }
+  :root {
+    /* Paleta del concepto aprobado 21-nov: fondo marfil, 5 colores y nada más.
+       Jade #047857 es el verde confirmado del logo. Los demás hex son
+       propuesta del borrador, para que Victor los ajuste. */
+    --marfil: #FAF6EE;
+    --noche: #17130E;
+    --azul-glifo: #1E3A5F;
+    --oro: #C9A227;
+    --jade: #047857;
+    --texto: #2B2620;
+    --texto-suave: #6B6257;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--marfil);
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* Barra superior mínima */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 20px; border-bottom: 1px solid #E8DFCF; flex-wrap: wrap; gap: 12px;
+    position: sticky; top: 0; z-index: 10; background: var(--marfil);
+    max-width: 1120px; margin: 0 auto;
+  }
+  section[id] { scroll-margin-top: 96px; }
+  nav { display: flex; flex-wrap: wrap; align-items: center; }
+  .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .marca img { width: 44px; height: 44px; object-fit: contain; }
+  .marca span {
+    font-family: "Mayan", Georgia, serif;
+    font-size: 1.5rem; color: var(--azul-glifo); letter-spacing: .02em;
+  }
+  nav a {
+    color: var(--texto-suave); text-decoration: none;
+    margin-left: 22px; font-size: .95rem;
+  }
+  nav a:hover { color: var(--azul-glifo); }
+  .controles { display: flex; align-items: center; gap: 10px; }
+  .lang-toggle { display: flex; border: 1px solid #E8DFCF; border-radius: 999px; overflow: hidden; }
+  .lang-toggle button {
+    border: 0; background: transparent; color: var(--texto-suave);
+    padding: 6px 12px; font-family: Georgia, serif; font-size: .9rem; cursor: pointer;
+  }
+  .lang-toggle button.activo { background: var(--oro); color: #17130E; font-weight: bold; }
+  .tema-btn {
+    border: 1px solid #E8DFCF; background: transparent; color: var(--texto-suave);
+    padding: 6px 12px; border-radius: 999px; font-family: Georgia, serif;
+    font-size: .9rem; cursor: pointer;
+  }
+  .tema-btn:hover { color: var(--azul-glifo); border-color: var(--azul-glifo); }
+
+  /* Hero: el logo real, en tarjeta blanca */
+  .hero { text-align: center; padding: 56px 0 40px; }
+  .hero .logo-card {
+    background: transparent; border-radius: 18px;
+    box-shadow: none;
+    display: inline-block; padding: 28px 28px 8px;
+  }
+  .hero .logo-card img { width: min(320px, 72vw); height: auto; display: block; }
+  .hero h1 {
+    font-family: "Mayan", Georgia, serif;
+    font-weight: normal; font-size: 1.6rem; color: var(--azul-glifo);
+    margin-top: 28px;
+  }
+  .hero p.lead { color: var(--texto-suave); max-width: 560px; margin: 10px auto 0; }
+  .hero .cta {
+    display: inline-block; margin-top: 24px; padding: 12px 26px;
+    background: var(--jade); color: #fff; text-decoration: none;
+    border-radius: 999px; font-family: Georgia, serif;
+  }
+  .hero .cta:hover { background: #036149; }
+
+  section { padding: 44px 0; }
+  h2 {
+    font-family: "Mayan", Georgia, serif; font-weight: normal;
+    font-size: 1.5rem; color: var(--azul-glifo); margin-bottom: 6px;
+  }
+  .sub { color: var(--texto-suave); margin-bottom: 22px; }
+
+  /* El nombre: dos tarjetas */
+  .tarjetas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tarjeta {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
+    padding: 22px;
+  }
+  .tarjeta h3 {
+    font-family: "Mayan", Georgia, serif; font-weight: normal;
+    font-size: 1.35rem; color: var(--azul-glifo);
+  }
+  .tarjeta .origen { color: var(--oro); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+  .tarjeta p { margin-top: 8px; }
+  .nota-nombre { margin-top: 18px; color: var(--texto-suave); font-size: .95rem; }
+  .intro-nombre { max-width: 720px; margin-bottom: 22px; }
+  .nota-nombre strong { color: var(--azul-glifo); }
+
+  /* Servicios */
+  .servicios { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .servicio {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
+    padding: 22px; border-top: 4px solid var(--jade);
+  }
+  .servicio:nth-child(2) { border-top-color: var(--azul-glifo); }
+  .servicio:nth-child(3) { border-top-color: var(--oro); }
+  .servicio h3 { font-size: 1.1rem; color: var(--azul-glifo); margin-bottom: 8px; }
+  .servicio p { font-size: .95rem; color: var(--texto-suave); }
+  .nota-servicios { margin-top: 18px; color: var(--texto-suave); font-size: .95rem; }
+
+  /* Proyectos */
+  .proyecto {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
+    padding: 24px; display: flex; gap: 20px; align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .proyecto .info { flex: 1; min-width: 240px; }
+  .proyecto h3 { color: var(--azul-glifo); font-size: 1.2rem; }
+  .proyecto p { color: var(--texto-suave); font-size: .95rem; margin-top: 6px; }
+  .proyecto a {
+    display: inline-block; margin-top: 12px; color: var(--jade);
+    font-weight: bold; text-decoration: none;
+  }
+  .proyecto a:hover { text-decoration: underline; }
+  .etiqueta {
+    background: var(--marfil); border: 1px solid var(--oro); color: var(--texto);
+    border-radius: 999px; padding: 4px 12px; font-size: .8rem; white-space: nowrap;
+  }
+
+  /* Batzy: banda oscura */
+  .banda {
+    background: var(--noche); color: #F2EBDD;
+    border-radius: 18px; padding: 32px;
+    display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+  }
+  .banda .foto {
+    background: #fff; border-radius: 14px; padding: 10px;
+    flex: 0 0 220px;
+  }
+  .banda .foto img { width: 100%; height: auto; display: block; border-radius: 8px; }
+  .banda .texto { flex: 1; min-width: 240px; }
+  .banda h2 { color: #F2EBDD; }
+  .banda p { color: #CFC6B4; margin-top: 8px; }
+  .banda p strong { color: #F2EBDD; }
+
+  /* Contacto */
+  .contacto { text-align: center; }
+  .contacto-datos {
+    display: flex; gap: 18px; justify-content: center;
+    flex-wrap: wrap; margin-top: 14px;
+  }
+  .dato {
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 12px;
+    padding: 16px 22px; min-width: 240px; text-align: left;
+  }
+  .dato-etiqueta {
+    font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--oro);
+  }
+  .dato a {
+    color: var(--azul-glifo); font-weight: bold; text-decoration: none;
+    font-size: 1.15rem;
+  }
+  .dato a:hover { text-decoration: underline; }
+  .dato span { color: var(--texto-suave); font-size: .95rem; }
+
+  /* Formulario de cotización */
+  .form-cotizacion {
+    max-width: 560px; margin: 28px auto 0; text-align: left;
+    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
+    padding: 24px;
+  }
+  .campo { margin-bottom: 16px; }
+  .campo label {
+    display: block; font-size: .9rem; color: var(--azul-glifo);
+    margin-bottom: 6px; font-weight: bold;
+  }
+  .campo input, .campo select, .campo textarea {
+    width: 100%; padding: 10px 12px; font-family: Georgia, serif;
+    font-size: 1rem; color: var(--texto);
+    border: 1px solid #D5CFC2; border-radius: 8px; background: var(--marfil);
+  }
+  .campo textarea { resize: vertical; }
+  .btn-enviar {
+    display: block; width: 100%; padding: 12px; border: 0; border-radius: 999px;
+    background: var(--jade); color: #fff; font-family: Georgia, serif;
+    font-size: 1rem; cursor: pointer;
+  }
+  .btn-enviar:hover { background: #036149; }
+  .form-success, .form-error { margin-top: 14px; font-size: .95rem; }
+  .form-success { color: var(--jade); }
+  .form-error { color: #B3261E; }
+
+  footer {
+    text-align: center; color: var(--texto-suave); font-size: .85rem;
+    padding: 28px 0 36px; border-top: 1px solid #E8DFCF;
+  }
+
+  /* Versión oscura: mismos 5 colores, fondo Noche maya */
+  html[data-theme="dark"] {
+    --marfil: #17130E;
+    --noche: #0E0B08;
+    --azul-glifo: #8FB4D9;
+    --jade: #10b981;
+    --texto: #F2EBDD;
+    --texto-suave: #CFC6B4;
+  }
+  html[data-theme="dark"] header { border-bottom-color: #3A3226; }
+  html[data-theme="dark"] .lang-toggle,
+  html[data-theme="dark"] .tema-btn { border-color: #3A3226; }
+  html[data-theme="dark"] .tarjeta,
+  html[data-theme="dark"] .servicio,
+  html[data-theme="dark"] .proyecto,
+  html[data-theme="dark"] .dato { background: #221C15; border-color: #3A3226; }
+  html[data-theme="dark"] .hero .cta:hover { background: #0da271; }
+  html[data-theme="dark"] .proyecto a { color: var(--jade); }
+  html[data-theme="dark"] .form-cotizacion { background: #221C15; border-color: #3A3226; }
+  html[data-theme="dark"] .campo input,
+  html[data-theme="dark"] .campo select,
+  html[data-theme="dark"] .campo textarea { background: #17130E; border-color: #3A3226; color: #F2EBDD; }
+  html[data-theme="dark"] .btn-enviar:hover { background: #0da271; }
+  html[data-theme="dark"] .form-success { color: var(--jade); }
+  html[data-theme="dark"] footer { border-top-color: #3A3226; }
+
+  /* Logo e ícono: en modo oscuro se muestra la versión joya sobre negro */
+  .icono-oscuro { display: none; }
+  .hero .logo-card img.logo-oscuro { display: none; }
+  html[data-theme="dark"] .icono-claro { display: none; }
+  html[data-theme="dark"] .icono-oscuro { display: block; }
+  html[data-theme="dark"] .hero .logo-card img.logo-claro { display: none; }
+  html[data-theme="dark"] .hero .logo-card img.logo-oscuro { display: block; }
+
+  @media (max-width: 640px) {
+    .tarjetas, .servicios { grid-template-columns: 1fr; }
+    nav a { margin-left: 12px; }
+    .marca span { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <a class="marca" href="index.html">
+      <img class="icono-claro" src="icono.png" alt="Símbolo WayakBatz">
+      <img class="icono-oscuro" src="icono-oscuro.png" alt="Símbolo WayakBatz">
+      <span>WayakBatz</span>
+    </a>
+    <nav>
+      <a href="nombre.html" class="activo" data-i18n="nav.nombre">El nombre</a>
+      <a href="experiencia.html" data-i18n="nav.experiencia">Experiencia</a>
+      <a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a>
+      <a href="index.html#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+      <a href="#batzy">Batzy</a>
+      <a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a>
+    </nav>
+    <div class="controles">
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es" class="activo">ES</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button type="button" id="tema-btn" class="tema-btn">Oscuro</button>
+    </div>
+  </header>
+
+<div class="wrap">
+
+  <section id="nombre">
+    <h2 data-i18n="nombre.h2">El nombre</h2>
+    <p class="sub" data-i18n="nombre.sub">Dos palabras mayas unidas para crear: El tejedor de sueños a través del tiempo.</p>
+    <p class="intro-nombre" data-i18n="nombre.intro">El origen del concepto: un nombre que representa
+      lo que hacemos, como identidad cultural y compromiso de herencia. Los mayas fueron
+      auténticos creadores de ciencia, arte y escritura: desarrollaron un complejo sistema de
+      escritura glífica, conocimientos avanzados de astronomía y matemáticas, el uso del cero
+      y calendarios precisos como la Cuenta Larga.</p>
+    <div class="tarjetas">
+      <div class="tarjeta">
+        <div class="origen">Ch'orti'</div>
+        <h3>Wayak'</h3>
+        <p data-i18n="nombre.wayak">Sueño, revelación. La idea que se sueña antes de hacerse.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="origen">K'iche'</div>
+        <h3>B'atz'</h3>
+        <p data-i18n="nombre.batz">El hilo del tiempo: Simboliza la continuidad de la vida, la conexión entre el pasado, el presente y el futuro, el destino y la unidad familiar.</p>
+      </div>
+    </div>
+    <p class="nota-nombre" data-i18n="nombre.nota">El símbolo del logo es el glifo <strong>B'atz'</strong>:
+      girado 180° forma la <strong>W de Wayak</strong>. El sueño y el hilo, en un solo trazo.</p>
+  </section>
+
+  <section id="batzy">
+    <div class="banda">
+      <div class="foto">
+        <img src="batzy.webp" alt="Batzy, el mono aullador programador de WayakBatz">
+      </div>
+      <div class="texto">
+        <h2 data-i18n="batzy.h2">Este es Batzy</h2>
+        <p data-i18n="batzy.p1"><strong>Batzy</strong> es el mono aullador, tejedor del tiempo.
+          Programador de WayakBatz, con su laptop y su banana a medio pelar.</p>
+        <p data-i18n="batzy.p2">Serio y concentrado frente al código. Como su dueño, cuando piensa
+          se le escapa la lengua un poquito hacia la izquierda.</p>
+        <p data-i18n="batzy.p3">El mono y la creación: Se asocia con la creatividad, el arte, la
+          inteligencia, la sabiduría y la habilidad manual o el tejido. En el calendario maya
+          se vincula con el inicio de ciclos y procesos.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 WayakBatz Technology · Charlotte, NC<br>
+    <span data-i18n="pie">Wayak' — sueño · B'atz' — el hilo</span>
+  </footer>
+
+</div>
+<script>
+(function () {
+  var I18N = {
+    es: {
+      "nav.nombre": "El nombre",
+      "nav.experiencia": "Experiencia",
+      "nav.servicios": "Servicios",
+      "nav.proyectos": "Proyectos",
+      "nav.contacto": "Contacto",
+      "nombre.h2": "El nombre",
+      "nombre.sub": "Dos palabras mayas unidas para crear: El tejedor de sueños a través del tiempo.",
+      "nombre.intro": "El origen del concepto: un nombre que representa lo que hacemos, como identidad cultural y compromiso de herencia. Los mayas fueron auténticos creadores de ciencia, arte y escritura: desarrollaron un complejo sistema de escritura glífica, conocimientos avanzados de astronomía y matemáticas, el uso del cero y calendarios precisos como la Cuenta Larga.",
+      "nombre.wayak": "Sueño, revelación. La idea que se sueña antes de hacerse.",
+      "nombre.batz": "El hilo del tiempo: Simboliza la continuidad de la vida, la conexión entre el pasado, el presente y el futuro, el destino y la unidad familiar.",
+      "nombre.nota": "El símbolo del logo es el glifo <strong>B'atz'</strong>: girado 180° forma la <strong>W de Wayak</strong>. El sueño y el hilo, en un solo trazo.",
+      "batzy.h2": "Este es Batzy",
+      "batzy.p1": "<strong>Batzy</strong> es el mono aullador, tejedor del tiempo. Programador de WayakBatz, con su laptop y su banana a medio pelar.",
+      "batzy.p2": "Serio y concentrado frente al código. Como su dueño, cuando piensa se le escapa la lengua un poquito hacia la izquierda.",
+      "batzy.p3": "El mono y la creación: Se asocia con la creatividad, el arte, la inteligencia, la sabiduría y la habilidad manual o el tejido. En el calendario maya se vincula con el inicio de ciclos y procesos.",
+      "pie": "Wayak' — sueño · B'atz' — el hilo",
+      "tema.claro": "Claro",
+      "tema.oscuro": "Oscuro",
+      "titulo": "El nombre — WayakBatz Technology"
+    },
+    en: {
+      "nav.nombre": "The name",
+      "nav.experiencia": "Experience",
+      "nav.servicios": "Services",
+      "nav.proyectos": "Projects",
+      "nav.contacto": "Contact",
+      "nombre.h2": "The name",
+      "nombre.sub": "Two Maya words joined to create: The weaver of dreams through time.",
+      "nombre.intro": "The origin of the concept: a name that represents what we do, as cultural identity and a commitment to heritage. The Maya were true creators of science, art and writing: they developed a complex glyphic writing system, advanced knowledge of astronomy and mathematics, the use of zero and precise calendars such as the Long Count.",
+      "nombre.wayak": "Dream, revelation. The idea dreamed before it is made.",
+      "nombre.batz": "The thread of time: It symbolizes the continuity of life, the connection between the past, the present and the future, destiny and family unity.",
+      "nombre.nota": "The logo symbol is the <strong>B'atz'</strong> glyph: rotated 180° it forms the <strong>W of Wayak</strong>. Dream and thread, in a single stroke.",
+      "batzy.h2": "This is Batzy",
+      "batzy.p1": "<strong>Batzy</strong> is the howler monkey, weaver of time. WayakBatz programmer, with his laptop and his half-peeled banana.",
+      "batzy.p2": "Serious and focused in front of the code. Like his owner, when he thinks, his tongue slips out a little to the left.",
+      "batzy.p3": "The monkey and creation: It is associated with creativity, art, intelligence, wisdom and manual skill, or weaving. In the Maya calendar it is linked to the beginning of cycles and processes.",
+      "pie": "Wayak' — dream · B'atz' — the thread",
+      "tema.claro": "Light",
+      "tema.oscuro": "Dark",
+      "titulo": "The name — WayakBatz Technology"
+    }
+  };
+
+  var temaBtn = document.getElementById("tema-btn");
+  var lang = "es";
+  var tema = "light";
+
+  try { lang = localStorage.getItem("wayakbatz-lang") || "es"; } catch (e) {}
+  try { tema = localStorage.getItem("wayakbatz-tema") || "light"; } catch (e) {}
+
+  function setLang(l) {
+    lang = (l === "en") ? "en" : "es";
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var v = I18N[lang][el.getAttribute("data-i18n")];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+      var v = I18N[lang][el.getAttribute("data-i18n-ph")];
+      if (v !== undefined) el.setAttribute("placeholder", v);
+    });
+    document.title = I18N[lang]["titulo"];
+    temaBtn.textContent = (tema === "dark") ? I18N[lang]["tema.claro"] : I18N[lang]["tema.oscuro"];
+    document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+      b.classList.toggle("activo", b.getAttribute("data-lang-btn") === lang);
+    });
+    try { localStorage.setItem("wayakbatz-lang", lang); } catch (e) {}
+  }
+
+  function setTema(t) {
+    tema = (t === "dark") ? "dark" : "light";
+    if (tema === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    temaBtn.textContent = (tema === "dark") ? I18N[lang]["tema.claro"] : I18N[lang]["tema.oscuro"];
+    try { localStorage.setItem("wayakbatz-tema", tema); } catch (e) {}
+  }
+
+  document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang-btn")); });
+  });
+  temaBtn.addEventListener("click", function () {
+    setTema(tema === "dark" ? "light" : "dark");
+  });
+
+  // Formulario Formspree: envío por AJAX con mensaje de gracias en la página.
+  document.querySelectorAll('form[action*="formspree.io"]').forEach(function (f) {
+    f.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var ok = f.querySelector(".form-success");
+      var err = f.querySelector(".form-error");
+      if (err) err.hidden = true;
+      fetch(f.action, { method: "POST", body: new FormData(f), headers: { "Accept": "application/json" } })
+        .then(function (r) {
+          if (r.ok) {
+            f.querySelectorAll(".campo, .btn-enviar").forEach(function (el) { el.style.display = "none"; });
+            if (ok) ok.hidden = false;
+          } else if (err) {
+            err.hidden = false;
+          }
+        })
+        .catch(function () { if (err) err.hidden = false; });
+    });
+  });
+
+  setLang(lang);
+  setTema(tema);
+})();
+</script>
+</body>
+</html>
