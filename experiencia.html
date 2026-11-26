@@ -118,7 +118,10 @@
   .chip {
     background: #fff; border: 1px solid #EDE4D2; border-radius: 999px;
     padding: 6px 14px; font-size: .92rem;
+    display: inline-flex; align-items: center; gap: 6px;
   }
+  .chip img { height: 18px; width: auto; display: block; }
+  html[data-theme="dark"] .chip img.logo-github { filter: invert(1); }
   .subtitulo {
     font-size: 1.05rem; color: var(--azul-glifo); font-weight: bold;
     margin: 24px 0 10px;
@@ -286,18 +289,18 @@
     <p class="sub" data-i18n="hab.sub">Tecnologías y sistemas que he construido.</p>
     <div class="subtitulo" data-i18n="hab.tec">Tecnologías</div>
     <div class="chips">
-      <span class="chip">Oracle Developer (2000, 9i, 10g)</span>
+      <span class="chip"><img src="img/tech/oracle.svg" alt="">Oracle Developer (2000, 9i, 10g)</span>
       <span class="chip">PL/SQL</span>
-      <span class="chip">Oracle APEX</span>
-      <span class="chip">SAP ERP/R3 (FI, RH, MM)</span>
+      <span class="chip"><img src="img/tech/oracle.svg" alt="">Oracle APEX</span>
+      <span class="chip"><img src="img/tech/sap.svg" alt="">SAP ERP/R3 (FI, RH, MM)</span>
       <span class="chip">JD Edwards ERP</span>
       <span class="chip">ABAP</span>
-      <span class="chip">Visual Basic</span>
-      <span class="chip">C# (DevExpress)</span>
-      <span class="chip">ASP.NET</span>
-      <span class="chip">Flutter y Dart</span>
-      <span class="chip">HTML, CSS y JavaScript</span>
-      <span class="chip">Git y GitHub</span>
+      <span class="chip"><img src="img/tech/visualbasic.svg" alt="">Visual Basic</span>
+      <span class="chip"><img src="img/tech/csharp.svg" alt="">C# (DevExpress)</span>
+      <span class="chip"><img src="img/tech/dotnet.svg" alt="">ASP.NET</span>
+      <span class="chip"><img src="img/tech/flutter.svg" alt=""><img src="img/tech/dart.svg" alt="">Flutter y Dart</span>
+      <span class="chip"><img src="img/tech/html5.svg" alt=""><img src="img/tech/css.svg" alt=""><img src="img/tech/javascript.svg" alt="">HTML, CSS y JavaScript</span>
+      <span class="chip"><img src="img/tech/git.svg" alt=""><img class="logo-github" src="img/tech/github.svg" alt="">Git y GitHub</span>
       <span class="chip">Toad for Oracle</span>
     </div>
     <div class="subtitulo" data-i18n="hab.soporte">Soporte técnico</div>
