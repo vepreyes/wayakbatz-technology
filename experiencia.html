@@ -88,9 +88,11 @@
     background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
     padding: 22px; margin-bottom: 16px; position: relative;
   }
+  .trabajo.lado { display: flex; align-items: center; gap: 18px; }
+  .trabajo-texto { flex: 1; min-width: 0; }
   .logo-empresa {
-    display: block; width: fit-content; margin: 0 auto 12px;
-    background: #fff; border-radius: 8px; padding: 6px 10px; line-height: 0;
+    flex: 0 0 auto; background: #fff; border-radius: 8px;
+    padding: 6px 10px; line-height: 0;
   }
   .logo-empresa img { display: block; height: 34px; width: auto; }
   .trabajo .fecha {
@@ -231,12 +233,14 @@
     <h2 data-i18n="exp.h2">Experiencia</h2>
     <p class="sub" data-i18n="exp.sub">De 1998 a hoy, en Honduras y en Estados Unidos.</p>
 
-    <div class="trabajo">
-      <a class="logo-empresa" href="https://ngshn.com/" target="_blank" rel="noopener"><img src="img/tech/ngs.png" alt="New Generation Software (NGS)"></a>
+    <div class="trabajo lado">
+      <div class="trabajo-texto">
       <div class="fecha">2018 –</div>
       <h3 data-i18n="exp.ngs.puesto">Analista programador de sistemas informáticos</h3>
       <div class="empresa">New Generation Software (NGS) · Outsourcing para Gildan Activewear, Río Nance, Honduras</div>
       <p data-i18n="exp.ngs.p">Análisis, diseño, desarrollo y mantenimiento de sistemas; mejora continua de procesos.</p>
+      </div>
+      <a class="logo-empresa" href="https://ngshn.com/" target="_blank" rel="noopener"><img src="img/tech/ngs.png" alt="New Generation Software (NGS)"></a>
     </div>
 
     <div class="trabajo">
