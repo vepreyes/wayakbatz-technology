@@ -122,6 +122,9 @@
   }
   .chip img { height: 18px; width: auto; display: block; }
   .chip img.logo-fondo-blanco { background: #fff; border-radius: 4px; padding: 2px 4px; }
+  .logos-soporte { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; padding: 4px 0; }
+  .logos-soporte img { height: 36px; width: auto; display: block; }
+  html[data-theme="dark"] .logos-soporte img.logo-negro { filter: invert(1); }
   html[data-theme="dark"] .chip img.logo-github { filter: invert(1); }
   .subtitulo {
     font-size: 1.05rem; color: var(--azul-glifo); font-weight: bold;
@@ -304,12 +307,12 @@
       <span class="chip"><img class="logo-fondo-blanco" src="img/tech/toad.png" alt="">Toad for Oracle</span>
     </div>
     <div class="subtitulo" data-i18n="hab.soporte">Soporte técnico</div>
-    <div class="chips">
-      <span class="chip">Windows</span>
-      <span class="chip">macOS</span>
-      <span class="chip">Microsoft Office</span>
-      <span class="chip">Android</span>
-      <span class="chip">iOS</span>
+    <div class="logos-soporte">
+      <img src="img/tech/windows.svg" alt="Windows" title="Windows">
+      <img class="logo-negro" src="img/tech/apple.svg" alt="macOS" title="macOS">
+      <img src="img/tech/microsoftoffice.svg" alt="Microsoft Office" title="Microsoft Office">
+      <img src="img/tech/android.svg" alt="Android" title="Android">
+      <img class="logo-negro" src="img/tech/ios.svg" alt="iOS" title="iOS">
     </div>
     <div class="subtitulo" data-i18n="hab.sistemas">Desarrollos</div>
     <ul class="lista">
