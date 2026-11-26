@@ -125,24 +125,13 @@
   .servicio p { font-size: .95rem; color: var(--texto-suave); }
   .nota-servicios { margin-top: 18px; color: var(--texto-suave); font-size: .95rem; }
 
-  /* Proyectos */
-  .proyecto {
-    background: #fff; border: 1px solid #EDE4D2; border-radius: 14px;
-    padding: 24px; display: flex; gap: 20px; align-items: flex-start;
-    flex-wrap: wrap;
+  /* Nuestros Clientes */
+  .clientes { display: flex; flex-wrap: wrap; gap: 18px; }
+  .logo-cliente {
+    display: block; background: #fff; border: 1px solid #EDE4D2;
+    border-radius: 14px; padding: 14px 18px; max-width: 280px;
   }
-  .proyecto .info { flex: 1; min-width: 240px; }
-  .proyecto h3 { color: var(--azul-glifo); font-size: 1.2rem; }
-  .proyecto p { color: var(--texto-suave); font-size: .95rem; margin-top: 6px; }
-  .proyecto a {
-    display: inline-block; margin-top: 12px; color: var(--jade);
-    font-weight: bold; text-decoration: none;
-  }
-  .proyecto a:hover { text-decoration: underline; }
-  .etiqueta {
-    background: var(--marfil); border: 1px solid var(--oro); color: var(--texto);
-    border-radius: 999px; padding: 4px 12px; font-size: .8rem; white-space: nowrap;
-  }
+  .logo-cliente img { display: block; width: 100%; height: auto; }
 
   /* Batzy: banda oscura */
   .banda {
@@ -227,10 +216,8 @@
   html[data-theme="dark"] .tema-btn { border-color: #3A3226; }
   html[data-theme="dark"] .tarjeta,
   html[data-theme="dark"] .servicio,
-  html[data-theme="dark"] .proyecto,
   html[data-theme="dark"] .dato { background: #221C15; border-color: #3A3226; }
   html[data-theme="dark"] .hero .cta:hover { background: #0da271; }
-  html[data-theme="dark"] .proyecto a { color: var(--jade); }
   html[data-theme="dark"] .form-cotizacion { background: #221C15; border-color: #3A3226; }
   html[data-theme="dark"] .campo input,
   html[data-theme="dark"] .campo select,
@@ -316,16 +303,9 @@
   </section>
 
   <section id="proyectos">
-    <h2 data-i18n="proyectos.h2">Proyectos</h2>
-    <p class="sub" data-i18n="proyectos.sub">Trabajo publicado, no promesas.</p>
-    <div class="proyecto">
-      <div class="info">
-        <h3>Calero's Cleaning Services</h3>
-        <p data-i18n="proyectos.caleros.p">Sitio bilingüe de 5 páginas para una empresa de limpieza en Charlotte:
-          10 servicios, cotización en línea y galería. Publicado en 2026.</p>
-        <a href="https://vepreyes.github.io/caleros-cleaning-services/" target="_blank" rel="noopener" data-i18n="proyectos.caleros.link">Ver el sitio &rarr;</a>
-      </div>
-      <span class="etiqueta" data-i18n="proyectos.caleros.etiqueta">Primer proyecto publicado</span>
+    <h2 data-i18n="proyectos.h2">Nuestros Clientes</h2>
+    <div class="clientes">
+      <a class="logo-cliente" href="https://vepreyes.github.io/caleros-cleaning-services/" target="_blank" rel="noopener" aria-label="Calero's Cleaning Services"><img src="logo-caleros.png" alt="Calero's Cleaning Services"></a>
     </div>
   </section>
 
@@ -398,11 +378,7 @@
       "servicios.soporte.h3": "Soporte técnico",
       "servicios.soporte.p": "Ayuda con computadoras, redes y programas: que las cosas funcionen y sigan funcionando, con trato directo.",
       "servicios.nota": "Cada proyecto se cotiza a la medida: cuéntanos qué necesitas y te decimos cuánto cuesta y en cuánto tiempo queda. Sin precios inventados en la página.",
-      "proyectos.h2": "Proyectos",
-      "proyectos.sub": "Trabajo publicado, no promesas.",
-      "proyectos.caleros.p": "Sitio bilingüe de 5 páginas para una empresa de limpieza en Charlotte: 10 servicios, cotización en línea y galería. Publicado en 2026.",
-      "proyectos.caleros.link": "Ver el sitio &rarr;",
-      "proyectos.caleros.etiqueta": "Primer proyecto publicado",
+      "proyectos.h2": "Nuestros Clientes",
       "contacto.h2": "Contacto",
       "contacto.sub": "¿Tienes un proyecto? Cuéntanos.",
       "contacto.tel": "Teléfono",
@@ -442,11 +418,7 @@
       "servicios.soporte.h3": "Technical support",
       "servicios.soporte.p": "Help with computers, networks, and programs: keeping things working, with direct, personal service.",
       "servicios.nota": "Every project is quoted to fit: tell us what you need and we'll tell you the cost and timeline. No invented prices on this page.",
-      "proyectos.h2": "Projects",
-      "proyectos.sub": "Published work, not promises.",
-      "proyectos.caleros.p": "Bilingual 5-page site for a cleaning company in Charlotte: 10 services, online quotes, and gallery. Published in 2026.",
-      "proyectos.caleros.link": "Visit the site &rarr;",
-      "proyectos.caleros.etiqueta": "First published project",
+      "proyectos.h2": "Our Clients",
       "contacto.h2": "Contact",
       "contacto.sub": "Have a project? Tell us.",
       "contacto.tel": "Phone",
