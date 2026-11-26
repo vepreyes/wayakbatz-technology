@@ -108,6 +108,11 @@
     font-weight: bold; text-decoration: none;
   }
   .tarjeta a:hover { text-decoration: underline; }
+  .tarjeta a.logo-proyecto {
+    display: block; margin-top: 0; background: #fff;
+    border-radius: 10px; padding: 10px 12px; margin-bottom: 14px;
+  }
+  .tarjeta a.logo-proyecto img { display: block; width: 100%; height: auto; }
 
   .chips { display: flex; flex-wrap: wrap; gap: 10px; }
   .chip {
@@ -258,7 +263,7 @@
     <p class="sub" data-i18n="proy.sub">Trabajo propio, publicado y funcionando.</p>
     <div class="tarjetas">
       <div class="tarjeta">
-        <h3>Calero's Cleaning Services</h3>
+        <a class="logo-proyecto" href="https://vepreyes.github.io/caleros-cleaning-services/" target="_blank" rel="noopener" aria-label="Calero's Cleaning Services — Ver el sitio"><img src="logo-caleros.png" alt="Calero's Cleaning Services"></a>
         <p data-i18n="proy.caleros.p">Sitio bilingüe de 5 páginas para una empresa de limpieza en Charlotte:
           10 servicios, cotización en línea y galería. Publicado en 2026.</p>
         <a href="https://vepreyes.github.io/caleros-cleaning-services/" target="_blank" rel="noopener" data-i18n="proy.caleros.link">Ver el sitio &rarr;</a>
